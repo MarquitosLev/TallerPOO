@@ -1,3 +1,3 @@
 public enum tipoObra {
-    libro, revista, ensayo, tesis, manual, boletin, coleccion, compendio, diario, diccionario, documental, enciclopedia, investigacion, monografia, publicacionMensual, otro;
+    Libro, Revista, Ensayo, Tesis, Manual, Boletin, Coleccion, Compendio, Diario, Diccionario, Documental, Enciclopedia, Investigacion, Monografia, PublicacionMensual, Otro;
 }
