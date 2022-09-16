@@ -1,4 +1,4 @@
 
 public enum FormaAdquirida {
-	compra, donacion, otro;
+	Compra, Donacion, Otro;
 }
