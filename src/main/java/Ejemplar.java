@@ -6,13 +6,12 @@ public class Ejemplar {
     private boolean disponible;
     private int cantPedidas;
     private Date fechaAdquisicion;
-    // private formaAdquirida formaAdquirida; 
+    private FormaAdquirida formaAdquirida; 
     private Date fechaDeBaja;
     private String motivoDeBaja;
     private String codUbicacion;
     private String codDeBarra;
-
-    //faltan get y set de formaAdquirida ;)
+    
 
     public int getIdEjemplar() {
         return idEjemplar;
@@ -54,7 +53,15 @@ public class Ejemplar {
         this.fechaAdquisicion = fechaAdquisicion;
     }
 
-    public Date getFechaDeBaja() {
+    public FormaAdquirida getFormaAdquirida() {
+		return formaAdquirida;
+	}
+
+	public void setFormaAdquirida(FormaAdquirida formaAdquirida) {
+		this.formaAdquirida = formaAdquirida;
+	}
+
+	public Date getFechaDeBaja() {
         return fechaDeBaja;
     }
 
