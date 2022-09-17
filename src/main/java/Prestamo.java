@@ -20,8 +20,12 @@ public class Prestamo {
 		this.aDomicilio = aDomicilio;
 	}
 
-	public Prestamo() {
-
+	public Prestamo(){
+		this.fechaHoraPrestada = new Date(0, 0, 1);
+		this.funcionarioPrestador = "";
+		this.fechaHoraADevolver = new Date(0, 0, 1);
+		this.fechaDevuelta = new Date(0, 0, 1);
+		this.funcionarioDevuelta = "";
 
 	}
 

@@ -1,5 +1,5 @@
 
-public class Persona {
+abstract class Persona {
 	private String nom;
 	private String apellido;
 	private String tipDoc;
