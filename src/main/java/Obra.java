@@ -1,6 +1,6 @@
 
 public class Obra {
-	//private tipoObra tipo;
+	
 	private int cantEjem;
 	private int cantEjemDisponible;
 	private String titulo;
@@ -11,9 +11,45 @@ public class Obra {
 	private String genero;
 	private int isbn;
 	private int id;
-	//private area area;
+	private Area area; //Enumeracion
+	private tipoObra tipo; //Enumeracion
+	//private Coleccion perteneceA; //Unidireccionalidad con multiplicidad. Quitar comentario en constructores
 	
-	// Faltan set y get de tipoObra y area
+	
+	public Obra() {
+		super();
+		this.cantEjem = 0;
+		this.cantEjemDisponible = 0;
+		this.titulo = "";
+		this.subtitulo = "";
+		this.autor1 = "";
+		this.autor2 = "";
+		this.autor3 = "";
+		this.genero = "";
+		this.isbn = 0;
+		this.id = 0;
+//		this.area =  "";
+//		this.tipo =  "";
+//		this.perteneceA = Coleccion();
+	}
+	
+	public Obra(int cantEjem, int cantEjemDisponible, String titulo, String subtitulo, String autor1, String autor2,
+			String autor3, String genero, int isbn, int id, Area area, tipoObra tipo, Coleccion perteneceA) {
+		super();
+		this.cantEjem = cantEjem;
+		this.cantEjemDisponible = cantEjemDisponible;
+		this.titulo = titulo;
+		this.subtitulo = subtitulo;
+		this.autor1 = autor1;
+		this.autor2 = autor2;
+		this.autor3 = autor3;
+		this.genero = genero;
+		this.isbn = isbn;
+		this.id = id;
+		this.area = area;
+		this.tipo = tipo;
+//		this.perteneceA = perteneceA;
+	}
 	
 	public int getCantEjem() {
 		return cantEjem;
@@ -66,15 +102,20 @@ public class Obra {
 	public int getIsbn() {
 		return isbn;
 	}
-	public void setIsbn(int isbn) {
-		this.isbn = isbn;
-	}
 	public int getId() {
 		return id;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public Area getArea() {
+		return area;
+	}
+	public void setArea(Area area) {
+		this.area = area;
+	}
+	public tipoObra getTipo() {
+		return tipo;
+	}
+	public void setTipo(tipoObra tipo) {
+		this.tipo = tipo;
 	}
 
-	
 }
