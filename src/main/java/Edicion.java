@@ -8,7 +8,14 @@ public class Edicion {
 	private int paginas;
 	private String idioma;
 	private formatoObra formato; //Falta Especificacion "Otro" en formato obra
+	private Obra obra;
 	
+	public Obra getObra() {
+		return obra;
+	}
+	public void setObra(Obra obra) {
+		this.obra = obra;
+	}
 	public String getEditorial() {
 		return editorial;
 	}

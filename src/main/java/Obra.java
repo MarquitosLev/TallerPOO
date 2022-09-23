@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 public class Obra {
 	
 	private int cantEjem;
@@ -14,6 +14,8 @@ public class Obra {
 	private Area area; //Enumeracion
 	private tipoObra tipo; //Enumeracion
 	//private Coleccion perteneceA; //Unidireccionalidad con multiplicidad. Quitar comentario en constructores
+	private ArrayList<Ejemplar> ejemplares;
+	private ArrayList<Edicion> ediciones;
 	
 	
 	public Obra() {
@@ -31,10 +33,12 @@ public class Obra {
 //		this.area =  "";
 //		this.tipo =  "";
 //		this.perteneceA = Coleccion();
+		this.ejemplares = new ArrayList<Ejemplar>();
+		this.ediciones = new ArrayList<Edicion>();
 	}
 	
 	public Obra(int cantEjem, int cantEjemDisponible, String titulo, String subtitulo, String autor1, String autor2,
-			String autor3, String genero, int isbn, int id, Area area, tipoObra tipo, Coleccion perteneceA) {
+			String autor3, String genero, int isbn, int id, Area area, tipoObra tipo, Coleccion perteneceA, ArrayList<Ejemplar> ejemplares, ArrayList<Edicion> ediciones) {
 		super();
 		this.cantEjem = cantEjem;
 		this.cantEjemDisponible = cantEjemDisponible;
@@ -49,8 +53,26 @@ public class Obra {
 		this.area = area;
 		this.tipo = tipo;
 //		this.perteneceA = perteneceA;
+		this.ejemplares = ejemplares;
+		this.ediciones = ediciones;
 	}
 	
+	public ArrayList<Edicion> getEdiciones() {
+		return ediciones;
+	}
+
+	public void setEdiciones(ArrayList<Edicion> ediciones) {
+		this.ediciones = ediciones;
+	}
+
+	public ArrayList<Ejemplar> getEjemplares() {
+		return ejemplares;
+	}
+
+	public void setEjemplares(ArrayList<Ejemplar> ejemplares) {
+		this.ejemplares = ejemplares;
+	}
+
 	public int getCantEjem() {
 		return cantEjem;
 	}

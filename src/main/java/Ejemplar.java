@@ -1,19 +1,50 @@
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Ejemplar {
     private int idEjemplar;
     private String observaciones;
     private boolean disponible;
     private int cantPedidas;
-    private Date fechaAdquisicion;
+    private LocalDate fechaAdquisicion;
     private FormaAdquirida formaAdquirida; 
-    private Date fechaDeBaja;
+    private LocalDate fechaDeBaja;
     private String motivoDeBaja;
     private String codUbicacion;
     private String codDeBarra;
+    private Obra obra;
     
+    
+    public Ejemplar(int idEjemplar, String observaciones, boolean disponible, int cantPedidas, LocalDate fechaAdquisicion,
+			FormaAdquirida formaAdquirida, LocalDate fechaDeBaja, String motivoDeBaja, String codUbicacion,
+			String codDeBarra, Obra obra) {
+		this.idEjemplar = idEjemplar;
+		this.observaciones = observaciones;
+		this.disponible = disponible;
+		this.cantPedidas = cantPedidas;
+		this.fechaAdquisicion = fechaAdquisicion;
+		this.formaAdquirida = formaAdquirida;
+		this.fechaDeBaja = fechaDeBaja;
+		this.motivoDeBaja = motivoDeBaja;
+		this.codUbicacion = codUbicacion;
+		this.codDeBarra = codDeBarra;
+		this.obra = obra;
+	}
 
-    public int getIdEjemplar() {
+	public Ejemplar() {
+		this.idEjemplar = 0;
+		this.observaciones = "";
+		this.disponible = true;
+		this.cantPedidas = 0;
+		this.fechaAdquisicion = LocalDate.of(0000, 0, 0);
+		//this.formaAdquirida = formaAdquirida.Otro; A esta todavía no la se hacer xd. Creo que hay que modificar algo en la enum. 
+		this.fechaDeBaja = LocalDate.of(0000, 0, 0);
+		this.motivoDeBaja = " ";
+		this.codUbicacion = " ";
+		this.codDeBarra = " ";
+		this.obra = new Obra();
+	}
+
+	public int getIdEjemplar() {
         return idEjemplar;
     }
 
@@ -45,11 +76,11 @@ public class Ejemplar {
         this.cantPedidas = cantPedidas;
     }
 
-    public Date getFechaAdquisicion() {
+    public LocalDate getFechaAdquisicion() {
         return fechaAdquisicion;
     }
 
-    public void setFechaAdquisicion(Date fechaAdquisicion) {
+    public void setFechaAdquisicion(LocalDate fechaAdquisicion) {
         this.fechaAdquisicion = fechaAdquisicion;
     }
 
@@ -61,11 +92,11 @@ public class Ejemplar {
 		this.formaAdquirida = formaAdquirida;
 	}
 
-	public Date getFechaDeBaja() {
+	public LocalDate getFechaDeBaja() {
         return fechaDeBaja;
     }
 
-    public void setFechaDeBaja(Date fechaDeBaja) {
+    public void setFechaDeBaja(LocalDate fechaDeBaja) {
         this.fechaDeBaja = fechaDeBaja;
     }
 
@@ -91,5 +122,13 @@ public class Ejemplar {
 
     public void setCodDeBarra(String codDeBarra) {
         this.codDeBarra = codDeBarra;
+    }
+    
+    public Obra getObra() {
+    	return this.obra;
+    }
+    
+    public void setObra(Obra obra){
+    	this.obra = obra;
     }
 }
