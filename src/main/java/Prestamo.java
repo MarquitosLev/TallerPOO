@@ -1,15 +1,19 @@
-import java.util.Date;
+//import java.util.Date;
+import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Prestamo {
-	private Date fechaHoraPrestada;
+	private LocalDate fechaHoraPrestada;
 	private String funcionarioPrestador;
-	private Date fechaHoraADevolver;
-	private Date fechaDevuelta;
+	private LocalDate fechaHoraADevolver;
+	private LocalDate fechaDevuelta;
 	private String funcionarioDevuelta;
 	private Lector lector;
 	private Boolean aDomicilio;
+	//Asociacion Multa y Prestamo
+	private ArrayList<Multa> multas;
 	
-	public Prestamo(Date fechaHoraPrestada, String funcionarioPrestador, Date fechaHoraADevolver, Date fechaDevuelta,
+	public Prestamo(LocalDate fechaHoraPrestada, String funcionarioPrestador, LocalDate fechaHoraADevolver, LocalDate fechaDevuelta,
 			String funcionarioDevuelta, Lector lector, Boolean aDomicilio) {
 		this.fechaHoraPrestada = fechaHoraPrestada;
 		this.funcionarioPrestador = funcionarioPrestador;
@@ -21,19 +25,30 @@ public class Prestamo {
 	}
 
 	public Prestamo(){
-		this.fechaHoraPrestada = new Date(0, 0, 1);
+		this.fechaHoraPrestada = LocalDate.of(2000, 1, 1);
 		this.funcionarioPrestador = "";
-		this.fechaHoraADevolver = new Date(0, 0, 1);
-		this.fechaDevuelta = new Date(0, 0, 1);
+		this.fechaHoraADevolver = LocalDate.of(2000, 1, 1);
+		this.fechaDevuelta = LocalDate.of(2000, 1, 1);
 		this.funcionarioDevuelta = "";
 
 	}
 
-	public Date getFechaHoraPrestada() {
+	
+
+
+	public ArrayList<Multa> getMultas() {
+		return multas;
+	}
+
+	public void setMultas(ArrayList<Multa> multas) {
+		this.multas = multas;
+	}
+
+	public LocalDate getFechaHoraPrestada() {
 		return fechaHoraPrestada;
 	}
 
-	public void setFechaHoraPrestada(Date fechaHoraPrestada) {
+	public void setFechaHoraPrestada(LocalDate fechaHoraPrestada) {
 		this.fechaHoraPrestada = fechaHoraPrestada;
 	}
 
@@ -45,19 +60,19 @@ public class Prestamo {
 		this.funcionarioPrestador = funcionarioPrestador;
 	}
 
-	public Date getFechaHoraADevolver() {
+	public LocalDate getFechaHoraADevolver() {
 		return fechaHoraADevolver;
 	}
 
-	public void setFechaHoraADevolver(Date fechaHoraADevolver) {
+	public void setFechaHoraADevolver(LocalDate fechaHoraADevolver) {
 		this.fechaHoraADevolver = fechaHoraADevolver;
 	}
 
-	public Date getFechaDevuelta() {
+	public LocalDate getFechaDevuelta() {
 		return fechaDevuelta;
 	}
 
-	public void setFechaDevuelta(Date fechaDevuelta) {
+	public void setFechaDevuelta(LocalDate fechaDevuelta) {
 		this.fechaDevuelta = fechaDevuelta;
 	}
 
