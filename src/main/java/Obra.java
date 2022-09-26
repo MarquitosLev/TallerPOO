@@ -16,8 +16,9 @@ public class Obra {
 	//private Coleccion perteneceA; //Unidireccionalidad con multiplicidad. Quitar comentario en constructores
 	private ArrayList<Ejemplar> ejemplares;
 	private ArrayList<Edicion> ediciones;
-	
-	
+	//Creación de la asociación entre funcionario, obra y reserva;
+	private Reserva funcionario;
+
 	public Obra() {
 		super();
 		this.cantEjem = 0;
@@ -55,6 +56,14 @@ public class Obra {
 //		this.perteneceA = perteneceA;
 		this.ejemplares = ejemplares;
 		this.ediciones = ediciones;
+	}
+	
+	public Reserva getFuncionario() {
+		return funcionario;
+	}
+
+	public void setFuncionario(Reserva funcionario) {
+		this.funcionario = funcionario;
 	}
 	
 	public ArrayList<Edicion> getEdiciones() {

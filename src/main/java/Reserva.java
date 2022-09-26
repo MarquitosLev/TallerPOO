@@ -1,9 +1,11 @@
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Reserva {
 	private Lector lectorReserva;
 	private Ejemplar ejemplarReservado;
-	private Date fechaReserva;
+	private LocalDate fechaReserva;
+	private Funcionario funcionario;
+	private Obra obra;
 	
 	public Lector getLectorReserva() {
 		return lectorReserva;
@@ -11,7 +13,7 @@ public class Reserva {
 	public Ejemplar getEjemplarReservado() {
 		return ejemplarReservado;
 	}
-	public Date getFechaReserva() {
+	public LocalDate getFechaReserva() {
 		return fechaReserva;
 	} 
 	
