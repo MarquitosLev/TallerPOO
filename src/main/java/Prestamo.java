@@ -12,6 +12,8 @@ public class Prestamo {
 	private Boolean aDomicilio;
 	//Asociacion Multa y Prestamo
 	private ArrayList<Multa> multas;
+	//Asociacion Funcionario y Prestamo:
+	private ArrayList<Funcionario> funcionarios;
 	
 	public Prestamo(LocalDate fechaHoraPrestada, String funcionarioPrestador, LocalDate fechaHoraADevolver, LocalDate fechaDevuelta,
 			String funcionarioDevuelta, Lector lector, Boolean aDomicilio) {
@@ -35,6 +37,13 @@ public class Prestamo {
 
 	
 
+	public ArrayList<Funcionario> getFuncionarios() {
+		return funcionarios;
+	}
+
+	public void setFuncionarios(ArrayList<Funcionario> funcionarios) {
+		this.funcionarios = funcionarios;
+	}
 
 	public ArrayList<Multa> getMultas() {
 		return multas;

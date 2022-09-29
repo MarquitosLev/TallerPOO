@@ -75,7 +75,7 @@ abstract class Persona {
 	}
 
 	public void setNumDoc(int numDoc) {
-		numDoc = numDoc;
+		this.numDoc = numDoc;
 	}
 
 	public String getCorreo() {
